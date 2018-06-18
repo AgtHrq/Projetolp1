@@ -204,6 +204,9 @@ public class TelaLoguin extends javax.swing.JFrame {
         Usuario nova = new Usuario(txtCNome.getText(), txtCLogin.getText(), txtCSenha.getText());
         dados.adicionarUsuarios(nova);
         usuarios.add(nova);
+        
+        
+        
         JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!");
 // dados.serializar();
        

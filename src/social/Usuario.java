@@ -10,9 +10,11 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 
 public class Usuario implements Serializable {
+    
     private String nome;
     private String biografia;
     private ArrayList<File> fotos;
@@ -35,6 +37,16 @@ public class Usuario implements Serializable {
         
         
         
+    }
+    public void adicionarAmigos(Usuario usuario){
+        amigosadd.add(usuario);
+    }
+    public String listAmigos(){
+        String Amigosadd = null;
+        for(int i = 0; i < amigosadd.size(); i++){
+            Amigosadd.concat(amigosadd.get(i).getNome() + "\n");
+        }
+        return Amigosadd;
     }
 
     public String getLogin() {
